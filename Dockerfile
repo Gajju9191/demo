@@ -1,17 +1,3 @@
-FROM ubuntu:latest
-FROM nginx:1.19.10
-FROM python:3.10.6
-
-# set a directory for the app
-WORKDIR /usr/src/bootapp
-COPY . /usr/src/bootapp/
-
-# using the default streamlit port number for container to expose
-EXPOSE 8501
-
-# install dependencies
-RUN apt-get update
-RUN pip install --no-cache-dir -r requirements.txt
-RUN python3 app.py
-# running the streamlit app
-ENTRYPOINT ["streamlit", "run", "app.py"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:78be2ac58aff65cafab561f8be8464e2f3c6b7c5e3009951a7ca1e52c23d9ed0
+size 400
